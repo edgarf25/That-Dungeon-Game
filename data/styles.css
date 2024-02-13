@@ -6,10 +6,18 @@ body {
     background-size: cover;
 }
 
-#game-container {
-    /* Add your game container styles here */
-}
-
 h1{
     text-align: center;
+}
+
+.action-button {
+    width: 70%;
+    height: 5vh; 
+    text-align: center;
+}
+
+
+#action-buttons {
+    display: flex;
+    justify-content: center;
 }
