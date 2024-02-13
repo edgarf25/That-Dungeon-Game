@@ -1,0 +1,320 @@
+{
+    "post_level_options": [
+      {
+        "action": "visit_shop",
+        "text": "Visit the shop"
+      },
+      {
+        "action": "continue_fighting",
+        "text": "Continue fighting"
+      },
+      {
+        "action": "run",
+        "text": "Run (Quit)"
+      }
+    ],
+    "levels": [
+      {
+        "level_number": 1,
+        "enemy_count": 1,
+        "boss_level": false,
+        "description": "You have entered the dungeon. A single enemy stands before you.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 2,
+        "enemy_count": 2,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 3,
+        "enemy_count": 3,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 4,
+        "enemy_count": 4,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": "boss_1",
+        "enemy_count": 1,
+        "boss_level": true,
+        "description": "You've reached the first boss. Prepare for a tough battle!",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the boss"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 5,
+        "enemy_count": 5,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 6,
+        "enemy_count": 6,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 7,
+        "enemy_count": 7,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 8,
+        "enemy_count": 8,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": "boss_2",
+        "enemy_count": 1,
+        "boss_level": true,
+        "description": "You've reached the second boss. Prepare for a tough battle!",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the boss"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 9,
+        "enemy_count": 9,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 10,
+        "enemy_count": 10,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 11,
+        "enemy_count": 11,
+        "boss_level": false,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": "boss_3",
+        "enemy_count": 1,
+        "boss_level": true,
+        "description": "You've reached the Final boss. Prepare for your demise!",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the boss"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      }
+    ],
+    "main_menu": {
+        "options": [
+          {
+            "action": "play_game",
+            "text": "Play the game"
+          }
+        ]
+      }
+  }

@@ -1,0 +1,15 @@
+body {
+    background-image: url('/imgs/Dungeon-Door.gif'); /* Replace 'your-image.jpg' with the path to your background image */
+    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#game-container {
+    /* Add your game container styles here */
+}
+
+h1{
+    text-align: center;
+}
