@@ -1,6 +1,6 @@
 body {
-    background-image: url('/imgs/Dungeon-Door.gif'); /* Replace 'your-image.jpg' with the path to your background image */
-    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    background-image: url('/imgs/Dungeon-Door.gif');
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -11,13 +11,16 @@ h1{
 }
 
 .action-button {
-    width: 70%;
+    width: 50%;
     height: 5vh; 
     text-align: center;
+    margin-top: 20px;
 }
 
 
 #action-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align the buttons horizontally */
+
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/data/styles.css">
 </head>
 <body>
-<h1 style="color: rgb(156, 5, 5);">Welcome to THE GAME!!!</h1>
+<h1 style="color: rgb(156, 5, 5);">Welcome to Dungeo 69!!!</h1>
 <h1 style="color: blueviolet;">Buckle up and get ready to rumble</h1>
 <div id="game-container">
     
@@ -15,53 +15,7 @@
 
 <div id="action-buttons"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    generateButtons('main_menu');
-});
-
-function generateButtons(option) {
-    fetch('/data/game.json')
-        .then(response => response.json())
-        .then(data => {
-            let actions;
-            switch (option) {
-                case 'post_level':
-                    actions = data.post_level_options;
-                    break;
-                case 'main_menu':
-                    actions = data.main_menu.options;
-                    break;
-                default: // Assume option is a level number
-                    const level = data.levels.find(level => level.level_number === option);
-                    actions = level ? level.options : null;
-            }
-
-            if (actions) {
-                const actionButtonsContainer = document.getElementById('action-buttons');
-                actionButtonsContainer.innerHTML = ''; // Clear previous buttons
-
-                actions.forEach(action => {
-                    const button = document.createElement('button');
-                    button.textContent = action.text;
-                    button.classList.add('action-button');
-                    button.addEventListener('click', function () {
-                        handleAction(action.action);
-                    });
-                    actionButtonsContainer.appendChild(button);
-                });
-            } else {
-                console.error('Options not found:', option);
-            }
-        })
-        .catch(error => console.error('Error fetching actions:', error));
-}
-
-function handleAction(action) {
-    // Your logic to handle the action goes here
-    console.log('Action:', action);
-}
-</script>
+<script src="/data/scripts.js"></script>
 
 <audio autoplay muted>
     <source src="song.mp3" type="audio/ogg">
