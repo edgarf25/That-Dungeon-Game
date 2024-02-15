@@ -24,3 +24,38 @@ h1{
     align-items: center; /* Center align the buttons horizontally */
 
 }
+
+#image-button {
+    width: 50%;
+    height: 45vh;
+    display: block; /* Change display to block */
+    margin: auto;
+    left: 0;
+    right: 0;
+    filter: brightness(100%); /* Initial brightness */
+    transition: filter 0.3s ease; /* Add a transition for the filter property */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+#image-button:hover {
+    filter: brightness(120%); /* Increase brightness on hover */
+}
+
+#image-button:active {
+    filter: brightness(150%); /* Increase brightness when clicked */
+    /* Optionally, you can add other effects like box-shadow to create a glow effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* White glow effect */
+}
+
+#bar {
+    margin: 3%;
+    height: 3.5vh;
+    background-color: red;
+    transition: width 0.5s ease; /* Add a transition for the width property */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+

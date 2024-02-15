@@ -17,7 +17,9 @@
       {
         "level_number": 1,
         "enemy_count": 1,
+        "enemy_health": 100,
         "boss_level": false,
+        "next_level": 2,
         "description": "You have entered the dungeon. A single enemy stands before you.",
         "options": [
           {
@@ -27,6 +29,10 @@
           {
             "action": "use_items",
             "text": "Use items"
+          },
+          {
+            "action": "test",
+            "text": "Just testing homies"
           },
           {
             "action": "run",
@@ -39,6 +45,7 @@
         "level_number": 2,
         "enemy_count": 2,
         "boss_level": false,
+        "next_level": 3,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -60,6 +67,7 @@
         "level_number": 3,
         "enemy_count": 3,
         "boss_level": false,
+        "next_level": 4,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -81,6 +89,7 @@
         "level_number": 4,
         "enemy_count": 4,
         "boss_level": false,
+        "next_level": "boss_1",
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -102,6 +111,7 @@
         "level_number": "boss_1",
         "enemy_count": 1,
         "boss_level": true,
+        "next_level": 5,
         "description": "You've reached the first boss. Prepare for a tough battle!",
         "options": [
           {
@@ -123,6 +133,7 @@
         "level_number": 5,
         "enemy_count": 5,
         "boss_level": false,
+        "next_level": 6,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -144,6 +155,7 @@
         "level_number": 6,
         "enemy_count": 6,
         "boss_level": false,
+        "next_level": 7,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -165,6 +177,7 @@
         "level_number": 7,
         "enemy_count": 7,
         "boss_level": false,
+        "next_level": 8,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -186,6 +199,7 @@
         "level_number": 8,
         "enemy_count": 8,
         "boss_level": false,
+        "next_level": "boss_2",
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -207,6 +221,7 @@
         "level_number": "boss_2",
         "enemy_count": 1,
         "boss_level": true,
+        "next_level": 9,
         "description": "You've reached the second boss. Prepare for a tough battle!",
         "options": [
           {
@@ -228,6 +243,7 @@
         "level_number": 9,
         "enemy_count": 9,
         "boss_level": false,
+        "next_level": 10,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -249,6 +265,7 @@
         "level_number": 10,
         "enemy_count": 10,
         "boss_level": false,
+        "next_level": 11,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -270,6 +287,7 @@
         "level_number": 11,
         "enemy_count": 11,
         "boss_level": false,
+        "next_level": "boss_3",
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -291,6 +309,7 @@
         "level_number": "boss_3",
         "enemy_count": 1,
         "boss_level": true,
+        "next_level": "winner_chicken_dinner",
         "description": "You've reached the Final boss. Prepare for your demise!",
         "options": [
           {
@@ -310,10 +329,16 @@
       }
     ],
     "main_menu": {
+        "next_level": 1,
         "options": [
           {
             "action": "play_game",
-            "text": "Play the game"
+            "text": "Play the game",
+            "next_state": "post_level_options"
+          },
+          {
+            "action": "how_to_play",
+            "text": "How To Play"
           }
         ]
       }
