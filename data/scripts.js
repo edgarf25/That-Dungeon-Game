@@ -1,6 +1,7 @@
 var next_level;
 var current_level;
 var game_data;
+var current_enemy_health;
 var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', "/sounds/music.mp3");
 const actionButtons = document.getElementById('action-buttons');
@@ -8,6 +9,8 @@ const actionButtons = document.getElementById('action-buttons');
 document.addEventListener('DOMContentLoaded', function () { //making sure the page is loaded before generating buttons
     fetchGameData();
 });
+
+current_enemy_health = game_data.levels[current_level].enemy_health; //setting it to max health to start
 
 const imageButton = document.getElementById('image-button');
 
@@ -18,7 +21,7 @@ imageButton.addEventListener('click', function() {
 });
 
 function playerDamage(){
-    const maxHit = 20;
+    const maxHit = 50;
     const minHit = 10;
     const randomNumber = Math.floor(Math.random() * (maxHit - minHit + 1)) + minHit;
     console.log(randomNumber); // Output: Random integer between 20 and 30
@@ -26,10 +29,14 @@ function playerDamage(){
 }
 
 function shrinkBar(damage) {
-    var bar = document.getElementById('bar');
-    var currentWidth = bar.offsetWidth;
-    var newWidth = currentWidth - damage; // Adjust the amount you want the bar to shrink by
-    bar.style.width = Math.max(newWidth, 0) + 'px'; // Ensure the width doesn't go below 0
+    const maxHealth = game_data.levels[current_level].enemy_health; //keep getting 100
+    console.log(maxHealth);
+    const bar = document.getElementById('bar');
+    const currentWidth = bar.offsetWidth;
+    const remainingHealth = maxHealth - damage;
+    const healthPercentage = (remainingHealth / maxHealth) * 100;
+    const newWidth = (currentWidth * healthPercentage) / 100;
+    bar.style.width = newWidth + 'px';
 }
 
 function toggleBar() {
@@ -54,7 +61,7 @@ function resetBar() {
 }
 
 function nextLevel(cur_level){
-    next_level = game_data.levels[cur_level - 1].next_level;
+    next_level = game_data.levels[cur_level].next_level;
     console.log("Next Level will be: " + next_level);
 }
 
@@ -137,7 +144,7 @@ function handleAction(action) {
         
         case 'play_game': //start game and go to level 1
             console.log('Playing game');
-            current_level = game_data.main_menu.next_level;
+            current_level = game_data.main_menu.next_level -1;
             // Add your logic to handle using items
             generateButtons(1);
             actionButtons.style.display = 'block';
