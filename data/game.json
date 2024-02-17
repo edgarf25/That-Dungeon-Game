@@ -1,25 +1,73 @@
 {
-    "post_level_options": [
+    "post_level_options": 
       {
-        "action": "visit_shop",
-        "text": "Visit the shop"
+        "description": "Congrats on your victory!",
+        "description2": "",
+        "shop_img": "src = shop.png",
+        "options": [
+          {
+            "action": "visit_shop",
+            "text": "Visit the shop"
+          },
+          {
+            "action": "continue_fighting",
+            "text": "Continue fighting"
+          },
+          {
+            "action": "celebrate",
+            "text": "Celebrate"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ]
       },
+      "death": 
       {
-        "action": "continue_fighting",
-        "text": "Continue fighting"
+        "description": "You have been defeated :(",
+        "description2": "",
+        "shop_img": "",
+        "options": [
+          {
+            "action": "run",
+            "text": "Quit to Main Menu"
+          }
+        ]
       },
+    "shop": 
       {
-        "action": "run",
-        "text": "Run (Quit)"
-      }
-    ],
+        "description": "Welcome to the shop!",
+        "shop_img": "src = shop.png",
+        "options": [
+          {
+            "action": "health_Potion",
+            "text": "Purchase Health Potion"
+          },
+          {
+            "action": "increase_armor",
+            "text": "Increase Armor by 1"
+          },
+          {
+            "action": "increase_max_health",
+            "text": "Increase Max Health by 10"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ]
+      },
     "levels": [
       {
-        "level_number": 1,
+        "level_number": 0,
         "enemy_count": 1,
         "enemy_health": 100,
         "boss_level": false,
-        "next_level": 2,
+        "next_level": 1,
+        "enemy_min_dmg": 1,
+        "enemy_max_dmg": 10,
+        "enemy_img": "src = etc.jpg",
         "description": "You have entered the dungeon. A single enemy stands before you.",
         "options": [
           {
@@ -42,8 +90,36 @@
         "post_level_options": "post_level_options"
       },
       {
-        "level_number": 2,
+        "level_number": 1,
         "enemy_count": 2,
+        "enemy_health": 200,
+        "enemy_min_dmg": 2,
+        "enemy_max_dmg": 15,
+        "boss_level": false,
+        "next_level": 2,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 2,
+        "enemy_count": 3,
+        "enemy_health": 300,
+        "enemy_min_dmg": 5,
+        "enemy_max_dmg": 20,
         "boss_level": false,
         "next_level": 3,
         "description": "You've defeated the enemy. Another enemy awaits.",
@@ -65,28 +141,6 @@
       },
       {
         "level_number": 3,
-        "enemy_count": 3,
-        "boss_level": false,
-        "next_level": 4,
-        "description": "You've defeated the enemy. Another enemy awaits.",
-        "options": [
-          {
-            "action": "attack",
-            "text": "Attack the enemy"
-          },
-          {
-            "action": "use_items",
-            "text": "Use items"
-          },
-          {
-            "action": "run",
-            "text": "Run (Quit)"
-          }
-        ],
-        "post_level_options": "post_level_options"
-      },
-      {
-        "level_number": 4,
         "enemy_count": 4,
         "boss_level": false,
         "next_level": "boss_1",
@@ -108,7 +162,7 @@
         "post_level_options": "post_level_options"
       },
       {
-        "level_number": "boss_1",
+        "level_number": 4,
         "enemy_count": 1,
         "boss_level": true,
         "next_level": 5,
@@ -221,7 +275,7 @@
         "level_number": "boss_2",
         "enemy_count": 1,
         "boss_level": true,
-        "next_level": 9,
+        "next_level": 10,
         "description": "You've reached the second boss. Prepare for a tough battle!",
         "options": [
           {
@@ -240,30 +294,8 @@
         "post_level_options": "post_level_options"
       },
       {
-        "level_number": 9,
-        "enemy_count": 9,
-        "boss_level": false,
-        "next_level": 10,
-        "description": "You've defeated the enemy. Another enemy awaits.",
-        "options": [
-          {
-            "action": "attack",
-            "text": "Attack the enemy"
-          },
-          {
-            "action": "use_items",
-            "text": "Use items"
-          },
-          {
-            "action": "run",
-            "text": "Run (Quit)"
-          }
-        ],
-        "post_level_options": "post_level_options"
-      },
-      {
         "level_number": 10,
-        "enemy_count": 10,
+        "enemy_count": 9,
         "boss_level": false,
         "next_level": 11,
         "description": "You've defeated the enemy. Another enemy awaits.",
@@ -285,6 +317,28 @@
       },
       {
         "level_number": 11,
+        "enemy_count": 10,
+        "boss_level": false,
+        "next_level": 12,
+        "description": "You've defeated the enemy. Another enemy awaits.",
+        "options": [
+          {
+            "action": "attack",
+            "text": "Attack the enemy"
+          },
+          {
+            "action": "use_items",
+            "text": "Use items"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ],
+        "post_level_options": "post_level_options"
+      },
+      {
+        "level_number": 12,
         "enemy_count": 11,
         "boss_level": false,
         "next_level": "boss_3",
@@ -329,12 +383,14 @@
       }
     ],
     "main_menu": {
-        "next_level": 1,
+        "next_level": 0,
+        "description": "Welcome to the Game!!!",
+        "description2": "Buckle up and get ready to rumble",
+        "player_health": 100,
         "options": [
           {
             "action": "play_game",
-            "text": "Play the game",
-            "next_state": "post_level_options"
+            "text": "Play the game"
           },
           {
             "action": "how_to_play",
