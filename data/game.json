@@ -2,8 +2,116 @@
     "post_level_options": 
       {
         "description": "Congrats on your victory!",
+        "description2": "You Gained $",
+        "background_img": "url('/imgs/Dungeon-Door.gif')",
+        "dope": 1,
+        "options": [
+          {
+            "action": "visit_shop",
+            "text": "Visit the shop"
+          },
+          {
+            "action": "continue_fighting",
+            "text": "Continue fighting"
+          },
+          {
+            "action": "celebrate",
+            "text": "Celebrate"
+          },
+          {
+            "action": "run",
+            "text": "Run (Quit)"
+          }
+        ]
+      },
+      "winner_chicken_dinner": 
+      {
+        "description": "Winner Winner Chicken Dinner!",
+        "description2": "Congrats on beating the dungeon!",
+        "dope": 10,
+        "options": [
+          {
+            "action": "run",
+            "text": "Go back to Main Menu"
+          }
+        ]
+      },
+      "how_to_play": 
+      {
+        "description": "Survive 14 Rounds: Navigate through 14 challenging levels of the dungeon, defeating enemies and overcoming obstacles to progress. Attack Enemies: Engage in turn-based combat with various enemies encountered in each level. Use strategy and skill to defeat them while minimizing damage to yourself.",
+        "description2": "Use Health Potions: Collect and utilize health potions strategically to replenish your health during battles. Manage your resources wisely as potions are limited Run to Main Menu: In case of emergency or to strategize further, you can choose to run from a level and return to the main menu. Be cautious, as fleeing forfeits any progress made in that level.",
+        "background_img": "url('/imgs/Dungeon-Door.gif')",
+        "dope": 1,
+        "options": [
+          {
+            "action": "run",
+            "text": "Go back to Main Menu"
+          }
+        ]
+      },
+      "story": {
+        "description": "You are wandering through a dense forest, surrounded by towering trees and the sounds of wildlife echoing through the air. As you navigate the twisting paths, a sense of curiosity drives you deeper into the unknown.",
+        "description2": "Suddenly, you stumble upon a clearing, and in its center stands a mysterious figure, cloaked in shadows. Before the figure lies an ancient door, weathered by time and shrouded in mystery.",
+        "background_img": "url('/imgs/forest.png')",
+        "options": [
+          {
+            "action": "approach_figure",
+            "text": "Approach the mysterious figure"
+          },
+          {
+            "action": "explore_forest",
+            "text": "Continue exploring the forest"
+          }
+        ]
+      },
+      "story_actions": {
+        "approach_figure": {
+          "description": "As you cautiously approach the mysterious figure, you notice their piercing gaze fixed upon you. The figure remains silent, emanating an aura of enigma and intrigue. What will you do?",
+          "options": [
+            {
+              "action": "speak_to_figure",
+              "text": "Speak to the figure"
+            },
+            {
+              "action": "play_game",
+              "text": "Ignore the figure and walk away"
+            }
+          ]
+        },
+        "explore_forest": {
+          "description": "You decide to explore further into the forest for many hours, getting no progress in your exploration. You think to yourself 'maybe I should go back to the mysterious figure'",
+          "options": [
+            {
+              "action": "play_game",
+              "text": "Return to the clearing with the mysterious figure"
+            }
+          ]
+        }
+      },
+      "speak_figure": {
+        "description": "As you approach, the figure's eyes lock onto yours, its presence ominous yet compelling. A voice resonates within, urging you to enter the cave beyond the door to fulfill your destiny. The choice is yours: will you heed the call?",
         "description2": "",
-        "shop_img": "src = shop.png",
+        "background_img": "url('/imgs/forest.png')",
+        "options": [
+          {
+            "action": "enter_cave",
+            "text": "Fulfill your Destiny and Enter"
+          },
+          {
+            "action": "explore_forest",
+            "text": "Continue exploring the forest"
+          }
+        ]
+      },
+      "player": 
+      {
+        "player_start_health": 100,
+        "player_start_armor": 0,
+        "player_start_hp_pots": 1,
+        "player_lifesteal_unlocked": false,
+        "player_starting_gold": 100,
+        "player_start_min_dmg": 10,
+        "player_start_max_dmg": 30,
         "options": [
           {
             "action": "visit_shop",
@@ -28,6 +136,7 @@
         "description": "You have been defeated :(",
         "description2": "",
         "shop_img": "",
+        "stim": 5,
         "options": [
           {
             "action": "run",
@@ -35,26 +144,61 @@
           }
         ]
       },
+      "items": 
+      {
+        "description2": "You used a health potion and your HP has increased",
+        "description": "You are out of health potions",
+        "background_img": "",
+        "options": [
+          {
+            "action": "health_potion",
+            "text": "Use health potion"
+          },
+          {
+            "action": "go_back_battle",
+            "text": "Go Back"
+          }
+        ]
+      },
     "shop": 
       {
         "description": "Welcome to the shop!",
-        "shop_img": "src = shop.png",
+        "description2": "You currently have ",
+        "background_img": "url('/imgs/shop.png')",
         "options": [
           {
-            "action": "health_Potion",
-            "text": "Purchase Health Potion"
+            "action": "purchase_hp",
+            "text": "Purchase Health Potion (50$)",
+            "cost": 50,
+            "dope": 1
           },
           {
             "action": "increase_armor",
-            "text": "Increase Armor by 1"
+            "text": "Increase Armor by 3 (100$)",
+            "cost": 100,
+            "dope": 1
           },
           {
             "action": "increase_max_health",
-            "text": "Increase Max Health by 10"
+            "text": "Increase Max Health by 10 (100$) and also heals you",
+            "cost": 100,
+            "dope": 1
           },
           {
-            "action": "run",
-            "text": "Run (Quit)"
+            "action": "increase_dmg",
+            "text": "Increase Damage 5 (100$)",
+            "cost": 100,
+            "dope": 1
+          },
+          {
+            "action": "unlock_lifesteal",
+            "text": "Unlock lifesteal (500$) heal 15 % of the damage you deal",
+            "cost": 500,
+            "dope": 2
+          },
+          {
+            "action": "go_back_post_level",
+            "text": "Leave Shop"
           }
         ]
       },
@@ -67,7 +211,8 @@
         "next_level": 1,
         "enemy_min_dmg": 1,
         "enemy_max_dmg": 10,
-        "enemy_img": "src = etc.jpg",
+        "gold_reward": 100,
+        "enemy_img": "/imgs/skeleton.png",
         "description": "You have entered the dungeon. A single enemy stands before you.",
         "options": [
           {
@@ -79,10 +224,6 @@
             "text": "Use items"
           },
           {
-            "action": "test",
-            "text": "TEST"
-          },
-          {
             "action": "run",
             "text": "Run (Quit)"
           }
@@ -92,11 +233,13 @@
       {
         "level_number": 1,
         "enemy_count": 2,
-        "enemy_health": 200,
+        "enemy_health": 150,
         "enemy_min_dmg": 2,
         "enemy_max_dmg": 15,
+        "gold_reward": 150,
         "boss_level": false,
         "next_level": 2,
+        "enemy_img": "/imgs/goblin.png",
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -117,11 +260,13 @@
       {
         "level_number": 2,
         "enemy_count": 3,
-        "enemy_health": 300,
-        "enemy_min_dmg": 5,
+        "enemy_health": 200,
+        "enemy_min_dmg": 3,
         "enemy_max_dmg": 20,
+        "gold_reward": 200,
         "boss_level": false,
         "next_level": 3,
+        "enemy_img": "/imgs/spider.png",
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -142,8 +287,13 @@
       {
         "level_number": 3,
         "enemy_count": 4,
+        "enemy_health": 250,
+        "enemy_min_dmg": 5,
+        "enemy_max_dmg": 25,
+        "gold_reward": 250,
         "boss_level": false,
-        "next_level": "boss_1",
+        "enemy_img": "/imgs/slime.png",
+        "next_level": 4,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -164,7 +314,12 @@
       {
         "level_number": 4,
         "enemy_count": 1,
+        "enemy_health": 300,
+        "enemy_min_dmg": 6,
+        "enemy_max_dmg": 30,
+        "gold_reward": 300,
         "boss_level": true,
+        "enemy_img": "/imgs/shrek.png",
         "next_level": 5,
         "description": "You've reached the first boss. Prepare for a tough battle!",
         "options": [
@@ -186,7 +341,12 @@
       {
         "level_number": 5,
         "enemy_count": 5,
+        "enemy_health": 350,
+        "enemy_min_dmg": 7,
+        "enemy_max_dmg": 35,
+        "gold_reward": 300,
         "boss_level": false,
+        "enemy_img": "/imgs/wolf.png",
         "next_level": 6,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
@@ -208,7 +368,12 @@
       {
         "level_number": 6,
         "enemy_count": 6,
+        "enemy_health": 400,
+        "enemy_min_dmg": 9,
+        "enemy_max_dmg": 40,
+        "gold_reward": 300,
         "boss_level": false,
+        "enemy_img": "/imgs/demon.png",
         "next_level": 7,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
@@ -230,7 +395,12 @@
       {
         "level_number": 7,
         "enemy_count": 7,
+        "enemy_health": 500,
+        "enemy_min_dmg": 10,
+        "enemy_max_dmg": 45,
+        "gold_reward": 400,
         "boss_level": false,
+        "enemy_img": "/imgs/vampire.png",
         "next_level": 8,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
@@ -252,8 +422,13 @@
       {
         "level_number": 8,
         "enemy_count": 8,
+        "enemy_health": 550,
+        "enemy_min_dmg": 11,
+        "enemy_max_dmg": 50,
+        "gold_reward": 400,
         "boss_level": false,
-        "next_level": "boss_2",
+        "enemy_img": "/imgs/ninja.png",
+        "next_level": 9,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -272,9 +447,14 @@
         "post_level_options": "post_level_options"
       },
       {
-        "level_number": "boss_2",
+        "level_number": 9,
         "enemy_count": 1,
+        "enemy_health": 600,
+        "enemy_min_dmg": 12,
+        "enemy_max_dmg": 55,
+        "gold_reward": 400,
         "boss_level": true,
+        "enemy_img": "/imgs/bigshrek.png",
         "next_level": 10,
         "description": "You've reached the second boss. Prepare for a tough battle!",
         "options": [
@@ -296,7 +476,12 @@
       {
         "level_number": 10,
         "enemy_count": 9,
+        "enemy_health": 650,
+        "enemy_min_dmg": 15,
+        "enemy_max_dmg": 60,
+        "gold_reward": 500,
         "boss_level": false,
+        "enemy_img": "/imgs/faceless.png",
         "next_level": 11,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
@@ -318,7 +503,12 @@
       {
         "level_number": 11,
         "enemy_count": 10,
+        "enemy_health": 700,
+        "enemy_min_dmg": 16,
+        "enemy_max_dmg": 65,
+        "gold_reward": 500,
         "boss_level": false,
+        "enemy_img": "/imgs/necro.png",
         "next_level": 12,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
@@ -340,8 +530,13 @@
       {
         "level_number": 12,
         "enemy_count": 11,
+        "enemy_health": 750,
+        "enemy_min_dmg": 17,
+        "enemy_max_dmg": 70,
+        "gold_reward": 1000,
         "boss_level": false,
-        "next_level": "boss_3",
+        "enemy_img": "/imgs/red.png",
+        "next_level": 13,
         "description": "You've defeated the enemy. Another enemy awaits.",
         "options": [
           {
@@ -360,9 +555,13 @@
         "post_level_options": "post_level_options"
       },
       {
-        "level_number": "boss_3",
+        "level_number": 13,
         "enemy_count": 1,
+        "enemy_health": 1000,
+        "enemy_min_dmg": 20,
+        "enemy_max_dmg": 80,
         "boss_level": true,
+        "enemy_img": "/imgs/boss.png",
         "next_level": "winner_chicken_dinner",
         "description": "You've reached the Final boss. Prepare for your demise!",
         "options": [
@@ -386,7 +585,8 @@
         "next_level": 0,
         "description": "Welcome to the Game!!!",
         "description2": "Buckle up and get ready to rumble",
-        "player_health": 100,
+        "hit_audio": "/sounds/bonk.mp3",
+        "hit_audio2": "/sounds/hammer.mp3",
         "options": [
           {
             "action": "play_game",

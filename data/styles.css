@@ -25,7 +25,7 @@ h1{
 
 }
 
-#image-button {
+#enemy-img {
     width: 50%;
     height: 45vh;
     display: block; /* Change display to block */
@@ -37,11 +37,11 @@ h1{
     object-fit: contain; /* Maintain aspect ratio */
 }
 
-#image-button:hover {
+#enemy-img:hover {
     filter: brightness(120%); /* Increase brightness on hover */
 }
 
-#image-button:active {
+#enemy-img:active {
     filter: brightness(150%); /* Increase brightness when clicked */
     /* Optionally, you can add other effects like box-shadow to create a glow effect */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* White glow effect */
@@ -71,6 +71,15 @@ h1{
     margin-right: 5%;
 }
 
+.flash-on-update {
+    animation: flash 0.5s;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 .hidden {
     visibility: hidden;
