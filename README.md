@@ -83,6 +83,7 @@ To play the game locally, follow these steps:
 
 ## Screenshots
 
-![Battle Screenshot](link_to_screenshot)  
+![Battle Screenshot](
+https://github.com/edgarf25/That-Dungeon-Game/blob/main/imgs/gamephoto.png)  
 
 
